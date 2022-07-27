@@ -1,0 +1,16 @@
+
+runtime: nodejs16 # or another supported version
+
+ 
+service: hikma-health-app
+ # Serve all static files with url ending with a file extension
+handlers:
+# Serve all static files with url ending with a file extension
+# Serve all static files with url ending with a file extension
+- url: /expo-shared/(.*\..+)$
+  static_files: web-build/\1
+  upload: web-build/(.*\..+)$
+# Catch all handler to index.html
+- url: /.*
+  static_files: web-build/index.html
+  upload: web-build/index.html
